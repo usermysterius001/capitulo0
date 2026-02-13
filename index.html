@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Capítulo 0</title>
+
+<style>
+body {
+    background-color: black;
+    color: white;
+    font-family: monospace;
+    text-align: center;
+    padding: 15%;
+    transition: opacity 2s;
+}
+
+input {
+    background: black;
+    color: white;
+    border: 1px solid white;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+button {
+    background: white;
+    color: black;
+    padding: 10px;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.fade {
+    opacity: 0;
+}
+</style>
+</head>
+
+<body>
+
+<div id="conteudo">
+    <h1>Quem está lendo?</h1>
+    <input type="text" id="nome" placeholder="Digite seu nome">
+    <br>
+    <button onclick="iniciar()">Responder</button>
+</div>
+
+<script>
+
+function iniciar() {
+    document.body.classList.add("fade");
+
+    setTimeout(function(){
+        document.body.classList.remove("fade");
+        document.getElementById("conteudo").innerHTML = `
+        <h2>Isso é o que te chamam.</h2>
+        <p>Antes disso… quem era você?</p>
+        <br>
+        <button onclick="observador()">Continuar</button>
+        `;
+    },2000);
+}
+
+function observador() {
+
+    document.body.classList.add("fade");
+
+    setTimeout(function(){
+        document.body.classList.remove("fade");
+        document.getElementById("conteudo").innerHTML = `
+        <p>Feche os olhos por 10 segundos.</p>
+        <p>Observe seus pensamentos.</p>
+        <p>Não controle.</p>
+        <p>Apenas observe.</p>
+        `;
+    },2000);
+
+    setTimeout(function(){
+        document.getElementById("conteudo").innerHTML = `
+        <h2>Quem estava observando?</h2>
+        <button onclick="silencio()">Prosseguir</button>
+        `;
+    },12000);
+}
+
+function silencio() {
+
+    document.getElementById("conteudo").innerHTML = "";
+
+    setTimeout(function(){
+        document.getElementById("conteudo").innerHTML = `
+        <h2>O vazio te incomoda?</h2>
+        <p>Ou você incomoda o vazio?</p>
+        <br>
+        <button onclick="capitulo()">Abrir Capítulo 0</button>
+        `;
+    },8000);
+}
+
+function capitulo() {
+
+    document.body.classList.add("fade");
+
+    setTimeout(function(){
+        document.body.classList.remove("fade");
+
+        document.getElementById("conteudo").innerHTML = `
+        <h2>CAPÍTULO 0</h2>
+
+        <p>Antes da vida, não havia ausência.<br>
+        Havia possibilidade.</p>
+
+        <p>O corpo é instrumento.<br>
+        A mente é filtro.<br>
+        A identidade é um nó.</p>
+
+        <p>A vida é o véu.<br>
+        A morte é retirar o véu.</p>
+
+        <p>O vazio não é ausência.<br>
+        É origem.</p>
+
+        <p>Você não está lendo.<br>
+        Está se reconhecendo.</p>
+
+        <br>
+        <button onclick="fim()">Continuar</button>
+        `;
+    },2000);
+}
+
+function fim() {
+    document.body.innerHTML = `
+    <div style="padding:20%;">
+    <h1>O Capítulo 0 nunca foi escrito.</h1>
+    <p>Ele deve ser vivido.</p>
+    <p style="font-size:12px;">Se você leu até aqui… já começou.</p>
+    </div>
+    `;
+}
+
+</script>
+
+<!--
+45 4C 45 53 20 45 53 54 41 4F 20 4F 42 53 45 52 56 41 4E 44 4F
+Base64: T2JzZXJ2ZSBvIG9ic2VydmFkb3Iu
+
+Observador não é quem olha.
+É quem percebe que olha.
+
+Senha: quem observa?
+-->
+
+<!-- Link invisível -->
+<a href="portal.html"
+   style="position:fixed;bottom:5px;right:5px;font-size:5px;color:black;">
+   .
+</a>
+
+</body>
+</html>

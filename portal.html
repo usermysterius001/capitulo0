@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Portal</title>
+
+<style>
+body {
+    background:black;
+    color:white;
+    font-family:monospace;
+    text-align:center;
+    padding:20%;
+}
+input {
+    background:black;
+    color:white;
+    border:1px solid white;
+    padding:10px;
+}
+button {
+    padding:10px;
+    margin-top:10px;
+}
+</style>
+</head>
+
+<body>
+
+<h2>Acesso Restrito</h2>
+<p>Digite a senha:</p>
+
+<input type="password" id="senha">
+<br>
+<button onclick="verificar()">Entrar</button>
+
+<script>
+function verificar(){
+    let senha = document.getElementById("senha").value;
+
+    if(senha.toLowerCase() === "observador"){
+        window.location.href = "fase2.html";
+    } else {
+        alert("Senha incorreta.");
+    }
+}
+</script>
+
+</body>
+</html>
